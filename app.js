@@ -101,7 +101,7 @@ app.get("/delete/:np",function(req,res){
 })
 
 
-mongoose.connect('mongodb+srv://dryptm:vinay26k@cluster0-ildsz.mongodb.net/blogs', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://<XX-your personal credentials here-XX>@cluster0-ildsz.mongodb.net/blogs', {useNewUrlParser: true});
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
