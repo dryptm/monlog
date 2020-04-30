@@ -101,7 +101,7 @@ app.get("/delete/:np",function(req,res){
 })
 
 
-mongoose.connect('mongodb://localhost/blogs', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://dryptm:vinay26k@cluster0-ildsz.mongodb.net/blogs', {useNewUrlParser: true});
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -111,6 +111,6 @@ db.once('open', function() {
 });
 
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });
